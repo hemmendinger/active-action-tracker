@@ -1,0 +1,13 @@
+
+FIFO queue
+first action is the top of the queue and default current working action
+
+actions performed by user:
+adding an action
+completing/deleting an action
+print current working action
+
+future/after basic behaviors:
+action hiearchy, making certain actions dependent upon the completion of one or more actions
+shuffling through the queue, reversing it
+assigning priority to actions
