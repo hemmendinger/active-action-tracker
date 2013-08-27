@@ -7,7 +7,40 @@ adding an action
 completing/deleting an action
 print current working action
 
+def add_action
+    check if file exists
+        if not, create file
+    check if have permissions to read/write file
+    open file for read/write
+    write action to file
+    save/close file
+    print notification of add to stdout
+
+def get_working_action
+    # might load script into shell config and have this command run every time a prompt is created
+    check if file exists
+	if not, create
+    check if have permissions to read
+    open file for read
+    get first line
+    close file
+    print first line to stdout
+
+def delete_working_action
+    check if have write permissions
+    open file for read/write
+    delete first line
+    close file
+    print new working action to stdout
+
+def check_permissions
+
+def open_file_create_tmp_file
+
+
 future/after basic behaviors:
 action hiearchy, making certain actions dependent upon the completion of one or more actions
 shuffling through the queue, reversing it
 assigning priority to actions
+look for file in project root as defined by git
+    utilizes 'git rev-parse --show-top-level' to get project root
