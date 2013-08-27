@@ -11,3 +11,16 @@ def add_action_to_queue():
 
 def delete_working_action():
     pass
+
+
+def test_func(default):
+    print('printing test function')
+
+parser = argparse.ArgumentParser(description='Active action tracker.')
+
+parser.add_argument(
+    '-t',
+    type=test_func,
+)
+
+options = parser.parse_args()
