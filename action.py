@@ -73,23 +73,28 @@ parser = argparse.ArgumentParser(description='Project actions')
 parser.add_argument(
     '--new', '-n',
     type=append_new_action,
+    help='Add a new action.',
 )
 parser.add_argument(
     '--action', '-a',
     nargs='?',
     default=get_first_action(),
+    help='Display current action.',
 )
 parser.add_argument(
     '--delete', '-d',
     type=delete_first_action,
+    help='Delete current action.',
 )
 parser.add_argument(
     '--cycle', '-c',
     type=cycle_to_next_action,
+    help='Cycle to the next action',
 )
 parser.add_argument(
     '--reverse', '-r',
     type=reverse_action_queue,
+    help='Reverse the queue.',
 )
 parser.add_argument(
     '-t',
