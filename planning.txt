@@ -1,4 +1,9 @@
+## todo ##
+more useful 'help' messages
+make py3 friendly
+    fix print statements
 
+##########
 FIFO queue
 first action is the top of the queue and default current working action
 
@@ -44,3 +49,5 @@ shuffling through the queue, reversing it
 assigning priority to actions
 look for file in project root as defined by git
     utilizes 'git rev-parse --show-top-level' to get project root
+add and change to new action (or expressed as add to top of queue)
+
