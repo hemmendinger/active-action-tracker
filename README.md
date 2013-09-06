@@ -13,17 +13,17 @@ Problem addressed/goal of project:
     in the spirit of the 'GTD' system, and only a signal action from a queue of 
     actions being worked on until completion.
 
--a, --action
+-a, --action  
     Display current action.
 
--n 'NEW ACTION', --new 'NEW ACTION'
+-n 'NEW ACTION', --new 'NEW ACTION'  
     Add new action as a quoted string.
 
--d 1, --delete 1
+-d 1, --delete 1  
     Delete current action.
 
--c 1, --cycle 1
+-c 1, --cycle 1  
     Cycle to the next action.
 
--r 1, --r 1
+-r 1, --r 1  
     Reverse the queue.
