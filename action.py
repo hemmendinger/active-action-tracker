@@ -11,7 +11,7 @@ def append_new_action(new_action):
 
 
 def get_first_action():
-    f = open('.actions', 'r')
+    f = open(find_action_file(), 'r')
     action = f.readline()
     f.close()
     print action
@@ -67,6 +67,18 @@ def test_func(default):
     val = os.access('.actions', os.R_OK)
     print val
 
+def find_action_file():
+    abspath = os.path.abspath(os.getcwd())
+    dirparts = abspath.split('/')
+
+    for i in xrange(len(dirparts) - 1):
+        newpath = '/'.join(dirparts[:len(dirparts)-i]) + '/' + '.actions'
+        print repr(newpath)
+        if os.path.exists(newpath):
+            return newpath
+    else:
+        return None
+
 
 parser = argparse.ArgumentParser(description='Project actions')
 
@@ -77,8 +89,9 @@ parser.add_argument(
 )
 parser.add_argument(
     '--action', '-a',
-    nargs='?',
-    default=get_first_action(),
+    dest='action',
+    action='store_const',
+    const=get_first_action,
     help='Display current action.',
 )
 parser.add_argument(
@@ -102,5 +115,8 @@ parser.add_argument(
 )
 options = parser.parse_args()
 
+
 action_filename = '.actions'
+
+options.action()
 
